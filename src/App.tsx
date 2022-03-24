@@ -1,11 +1,13 @@
 import React from 'react';
+import Header from './components/Header';
+import Home from './components/Home';
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline bg-red-500">
-      Hello world!
-     <div className='h-40 bg-green-500' ></div>
-    </h1>
+    <>
+    <Header />
+    <Home />
+    </>
   );
 }
 

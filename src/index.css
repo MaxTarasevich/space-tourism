@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Bellefair';
+    src: local('Bellefair Regular'), local('Bellefair-Regular'),
+        url('../src/font/Bellefair-Regular.woff2') format('woff2'),
+        url('../src/font/Bellefair-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Barlow Condensed';
+    src: local('Barlow Condensed Regular'), local('BarlowCondensed-Regular'),
+        url('../src/font/BarlowCondensed-Regular.woff2') format('woff2'),
+        url('../src/font/BarlowCondensed-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.container{
+    @apply lg:w-[1110px] w-[90%] mx-auto;
+}
+.subtitle{
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
