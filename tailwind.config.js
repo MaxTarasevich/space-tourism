@@ -9,6 +9,10 @@ module.exports = {
       transparent: 'transparent',
       'dark':'#0B0D17',
       'purple':'#D0D6F9',
+      'grey':{
+        40:'rgba(151, 151, 151, 0.45)',
+        65:'rgba(151, 151, 151, 0.65)'
+        },
       'white':{
         40:'rgba(255, 255, 255, 0.04)',
         50:'rgba(255, 255, 255, 0.5)',
