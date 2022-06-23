@@ -1,12 +1,27 @@
 import React from 'react';
-import Header from './components/Header';
-import Home from './components/Home';
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
+
+import Navigation from './components/Navigation';
+import Crew  from './pages/Crew';
+import Destination from './pages/Destination';
+import Home  from './pages/Home';
+import Technology from './pages/Technology';
 
 function App() {
   return (
     <>
-    <Header />
-    <Home />
+    <Navigation />
+    <Routes>
+
+      <Route path="/" element={<Home />} />
+      <Route path="/Crew" element={<Crew />} />
+      <Route path="/Destination" element={<Destination />} />
+      <Route path="/Technology" element={<Technology />} />
+      
+    </Routes>
     </>
   );
 }
