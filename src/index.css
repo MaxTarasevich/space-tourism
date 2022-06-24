@@ -21,3 +21,21 @@
     font-style: normal;
     font-display: swap;
 }
+
+
+li a.active{
+        @apply md:border-b-white-100 md:border-r-transparent border-r-white-100;
+    }
+
+
+@layer components{
+
+    .animate-hover{
+        @apply transition-all duration-500 ease-in-out;
+    }
+
+    .nav-text{
+        @apply font-Barlow text-white-100 lg:text-nav md:text-subhead2 text-nav uppercase;
+    }
+
+}
