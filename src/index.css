@@ -37,5 +37,8 @@ li a.active{
     .nav-text{
         @apply font-Barlow text-white-100 lg:text-nav md:text-subhead2 text-nav uppercase;
     }
-
+    
+    .flex-center{
+    @apply flex justify-center items-center;
+    }
 }

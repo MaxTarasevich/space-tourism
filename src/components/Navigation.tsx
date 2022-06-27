@@ -16,7 +16,7 @@ const [burger,setBurger]= useState<boolean>(false)
 
         <ul className={`md:flex w-[60%] sm:min-w-[450px] justify-around bg-white-40 backdrop-blur-[81px] nav-text animate-hover
                         md:static fixed top-0 ${burger ? 'right-0' : '-right-full'} z-10 md:flex-row flex-col md:p-0 pt-28 pl-8 md:min-h-fit min-h-screen
-                        before:absolute before:w-[57%] before:h-px before:bg-white-50 before:top-1/2 before:right-[98%] before:lg:block before:hidden`}>
+                        before:absolute before:w-[32%] before:h-px before:bg-white-50 before:top-1/2 before:right-[56%] before:lg:block before:hidden`}>
 
                             {Nav.map((i,index)=>(
                                 <li key={i}>
