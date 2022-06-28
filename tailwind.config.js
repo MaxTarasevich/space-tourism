@@ -14,16 +14,20 @@ module.exports = {
         65:'rgba(151, 151, 151, 0.65)'
         },
       'white':{
+        10:'rgba(255, 255, 255, 0.1)',
         40:'rgba(255, 255, 255, 0.04)',
         50:'rgba(255, 255, 255, 0.5)',
         100:'#FFFFFF'}
     },
     fontFamily: {
-      'bell': ['Bellefair'],
-      'Barlow': ['Barlow Condensed']
+      'Bellefair': ['Bellefair'],
+      'BarlowCond': ['Barlow Condensed'],
+      'Barlow': ['Barlow']
     },
     fontSize: {
-      'head1': '150px',
+      'head1': ['150px' , {
+        lineHeight:'1.15',
+      }],
       'head2': '100px',
       'head3': '56px',
       'head4': '32px',

@@ -22,6 +22,18 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Barlow';
+    src: local('Barlow Regular'), local('Barlow-Regular'),
+        url('../src/font/Barlow-Regular.woff2') format('woff2'),
+        url('../src/font/Barlow-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+body{
+    @apply text-white-100 font-Bellefair;
+}
 
 li a.active{
         @apply md:border-b-white-100 md:border-r-transparent border-r-white-100;
@@ -30,15 +42,59 @@ li a.active{
 
 @layer components{
 
+/*Animation*/
+
     .animate-hover{
         @apply transition-all duration-500 ease-in-out;
     }
 
+/* Utility classes for Typography*/
+
     .nav-text{
-        @apply font-Barlow text-white-100 lg:text-nav md:text-subhead2 text-nav uppercase;
+        @apply font-BarlowCond text-white-100 lg:text-nav md:text-subhead2 text-nav uppercase;
     }
+
+    .typ-heading1{
+        @apply lg:text-left text-center md:text-head1 text-[80px] uppercase;
+    }
+
+    .typ-heading2{
+        @apply lg:text-head2 md:text-[80px] text-[56px] uppercase;
+    }
+
+    .typ-heading3{
+        @apply lg:text-head3 md:text-[40px] text-[24px] uppercase;
+    }
+
+    .typ-heading4{
+        @apply lg:text-head4 md:text-[24px] text-[16px] uppercase;
+    }
+
+    .typ-heading5{
+        @apply font-BarlowCond lg:text-head5 md:text-[20px] text-[16px] uppercase;
+    }
+
+    .typ-subheading1{
+        @apply lg:text-subhead1 lg:text-left md:text-[20px] text-center uppercase;
+    }
+
+    .typ-subheading2{
+        @apply font-BarlowCond text-subhead2 text-purple uppercase;
+    }
+
+    .typ-body{
+        @apply font-Barlow lg:text-body lg:text-left text-[16px] text-center ;
+    }
+
+
     
+/*Utility classes*/
+
     .flex-center{
-    @apply flex justify-center items-center;
+        @apply flex justify-center items-center;
+    }
+
+    .wrapper{
+        @apply lg:max-w-[77%] md:max-w-[58%] md:px-0 max-w-[100%] px-6 mx-auto;
     }
 }
