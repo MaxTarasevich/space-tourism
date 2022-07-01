@@ -21,10 +21,7 @@ const [burger,setBurger]= useState<boolean>(false)
                             {Nav.map((i,index)=>(
                                 <li key={i}>
                                     <NavLink to={`/${i}`} 
-                                            className='inline-block md:py-9 py-3 md:w-fit w-full border-[3px] border-transparent 
-                                                    hover:md:border-b-white-50 hover:md:border-r-transparent hover:border-r-white-50
-                                                    focus:md:border-b-white-50 focus:md:border-r-transparent focus:border-r-white-50 
-                                                    animate-hover'
+                                            className='inline-block md:py-9 py-3 md:w-fit w-full list-border animate-hover'
                                             onClick={()=>setBurger(!burger)}
                                     >
                                         <span className='font-bold mr-3 lg:inline-block md:hidden'>
