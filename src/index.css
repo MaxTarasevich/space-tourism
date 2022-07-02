@@ -80,11 +80,11 @@ body{
     }
 
     .typ-heading3{
-        @apply lg:text-head3 md:text-[40px] text-[24px] uppercase;
+        @apply lg:text-head3 md:text-[40px] text-[24px] uppercase lg:text-left text-center;
     }
 
     .typ-heading4{
-        @apply lg:text-head4 md:text-[24px] text-[16px] uppercase;
+        @apply lg:text-head4 md:text-[24px] text-[16px] uppercase lg:text-left text-center;
     }
 
     .typ-heading5{
