@@ -36,13 +36,13 @@ useEffect(() => {
         {tech[0] ?  
         <div className="technology flex lg:flex-nowrap flex-wrap justify-between items-center lg:mt-7 md:mt-14 mt-8">
 
-          <div className="technology-content flex lg:flex-nowrap flex-wrap lg:justify-between justify-center gap-x-20 lg:w-fit w-full">
+          <div className="technology-content flex lg:flex-nowrap flex-wrap lg:justify-between justify-center gap-x-8 lg:w-fit w-full">
 
             <div className="technology-control flex lg:flex-col justify-center gap-y-7 gap-x-4 lg:w-fit w-full">
 
               {tech.map((el, index)=>(
                  <button key={index}
-                 className={`technology-btn typ-heading4 text-center lg:px-9 md:px-6 px-4 aspect-square rounded-full bg-transparen border border-white-100
+                 className={`technology-btn typ-heading4 text-center xl:px-9 md:px-6 px-4 aspect-square rounded-full bg-transparen border border-white-100
                              hover:bg-white-100 hover:text-dark animate-hover 
                              ${index===slide ? 'bg-white-100 text-dark' : ''}`}
                   onClick={()=>setSlide(index)}>
@@ -62,16 +62,16 @@ useEffect(() => {
                 {tech[slide].name}
               </h2>
 
-              <p className="technology-description typ-body mt-4 lg:pr-6 px-6">
+              <p className="technology-description typ-body mt-4 lg:pr-6 lg:pl-0 px-6">
                 {tech[slide].description}
               </p>
 
             </div>
           </div>
 
-          <picture className="technology-image lg:h-[527px] md:h-[310px] h-[170px] lg:order-1 -order-1 lg:mb-0 md:mb-16 mb-9">
+          <picture className="technology-image 2xl:w-[50%] lg:h-[527px] md:h-[310px] h-[170px] lg:order-1 -order-1 lg:mb-0 md:mb-16 mb-9">
             <source media="(min-width: 1024px)" srcSet={tech[slide].images.portrait} />
-            <img className='h-full object-cover object-center lg:w-fit w-screen' src={tech[slide].images.landscape} alt={tech[slide].name} />
+            <img className='h-full object-cover object-bottom lg:w-full w-screen' src={tech[slide].images.landscape} alt={tech[slide].name} />
           </picture>
 
 </div>: 'Loading...'}
