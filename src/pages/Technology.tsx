@@ -1,8 +1,9 @@
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react'
 import TitlePage from '../components/TitlePage'
 
 import data from '../data/data.json'
+import animation from '../data/animation'
 
 interface TechData {
   name: string;
@@ -60,30 +61,49 @@ useEffect(() => {
               ))}
               
             </div>
+            <AnimatePresence exitBeforeEnter>
+              <motion.div key={tech[slide].description}
+                          variants={animation} 
+                          initial="initialText"
+                          animate="animateText"
+                          exit="exitText"
+                          transition={{duration:0.6}}
+                          className="technology-text max-w-[470px] lg:mt-0 mt-11">
 
-            <div   className="technology-text max-w-[470px] lg:mt-0 mt-11">
+                <h3 className="technology-subtitle nav-text lg:text-left text-center text-[16px]">
+                  THE TERMINOLOGY…
+                </h3>
 
-              <h3 className="technology-subtitle nav-text lg:text-left text-center text-[16px]">
-                THE TERMINOLOGY…
-              </h3>
+                <h2
+                  className="technology-title typ-heading3 mt-4">
+                  {tech[slide].name}
+                </h2>
 
-              <h2
-                className="technology-title typ-heading3 mt-4">
-                {tech[slide].name}
-              </h2>
+                <p className="technology-description typ-body mt-4 lg:pr-6 lg:pl-0 px-6">
+                  {tech[slide].description}
+                </p>
 
-              <p className="technology-description typ-body mt-4 lg:pr-6 lg:pl-0 px-6">
-                {tech[slide].description}
-              </p>
-
-            </div>
+              </motion.div>
+            </AnimatePresence>
 
           </div>
+          <AnimatePresence exitBeforeEnter>
+          <motion.picture key={tech[slide].name} 
+                          initial="initial"
+                          animate="animate"
+                          exit="exit"
+                          variants={animation}
+                          transition={{duration:0.6}}
+                          className="technology-image 2xl:w-[50%] lg:h-[527px] md:h-[310px] h-[170px] lg:order-1 -order-1 lg:mb-0 md:mb-16 mb-9">
 
-          <picture className="technology-image 2xl:w-[50%] lg:h-[527px] md:h-[310px] h-[170px] lg:order-1 -order-1 lg:mb-0 md:mb-16 mb-9">
-            <source media="(min-width: 1024px)" srcSet={tech[slide].images.portrait} />
-            <img className='h-full object-cover object-center lg:w-full w-screen' src={tech[slide].images.landscape} alt={tech[slide].name} />
-          </picture>
+              <source media="(min-width: 1024px)" srcSet={tech[slide].images.portrait} />
+            
+              <img  className='h-full object-cover object-center lg:w-full w-screen' 
+                    src={tech[slide].images.landscape} 
+                    alt={tech[slide].name} />
+            
+          </motion.picture>
+          </AnimatePresence>
 
 </div>: 'Loading...'}
 

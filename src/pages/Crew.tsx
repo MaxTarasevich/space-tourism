@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import TitlePage from '../components/TitlePage'
 
 import data from '../data/data.json'
+import animation from '../data/animation'
 
 interface CrewData{
     name: string;
@@ -13,40 +14,6 @@ interface CrewData{
     role: string;
     bio: string;
 }
-
-const animation = {
-  initial:{
-    opacity:0,
-    scale:0.4,
-    y:100
-  },
-  animate:{
-    opacity:1,
-    scale:1,
-    y:0
-  },
-  exit:{
-    opacity:0,
-    scale:0.4,
-    y:-100
-  },
-  initialText:{
-    opacity:0,
-    scale:0.4,
-    y:-100
-  },
-  animateText:{
-    opacity:1,
-    scale:1,
-    y:0
-  },
-  exitText:{
-    opacity:0,
-    scale:0.4,
-    y:100
-  }
-}
-
 
 const Crew = () => {
 
