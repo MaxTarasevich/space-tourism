@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react'
 import TitlePage from '../components/TitlePage'
 
@@ -12,6 +12,39 @@ interface CrewData{
     };
     role: string;
     bio: string;
+}
+
+const animation = {
+  initial:{
+    opacity:0,
+    scale:0.4,
+    y:100
+  },
+  animate:{
+    opacity:1,
+    scale:1,
+    y:0
+  },
+  exit:{
+    opacity:0,
+    scale:0.4,
+    y:-100
+  },
+  initialText:{
+    opacity:0,
+    scale:0.4,
+    y:-100
+  },
+  animateText:{
+    opacity:1,
+    scale:1,
+    y:0
+  },
+  exitText:{
+    opacity:0,
+    scale:0.4,
+    y:100
+  }
 }
 
 
@@ -47,7 +80,14 @@ useEffect(() => {
         {crew[0] ? 
         <>
         <div className="crew-content max-w-[488px] md:order-1 order-2 flex flex-col">
-              
+        <AnimatePresence exitBeforeEnter>
+          <motion.div key={crew[slide].name}
+                      initial="initialText"
+                      animate="animateText"
+                      exit="exitText"
+                      variants={animation}
+                      transition={{duration:0.6}}>
+
               <h3 className="crew-subtitle typ-heading4 text-white-50">
                 {crew[slide].role}
               </h3>
@@ -60,8 +100,11 @@ useEffect(() => {
                 {crew[slide].bio}
               </p>
 
+          </motion.div>
+        </AnimatePresence>
+        
               <div className="crew-navigation lg:absolute bottom-16 md:mt-10 md:mb-0 mb-8 flex  lg:justify-start justify-center gap-x-6 md:order-1 -order-10">
-
+         
                {crew.map((el,index)=>(
                 <div key={index} 
                      className={`lg:w-4 w-3 lg:h-4 h-3 rounded-full bg-white-100 cursor-pointer 
@@ -74,13 +117,21 @@ useEffect(() => {
                
               </div>
 
-            </div>
+        </div>
 
             <div className="crew-image lg:-mt-24 lg:h-fit md:h-[532px] h-[230px] md:w-fit 
                             w-full md:order-2 order-1 md:border-b-transparent border-b border-line-grey">
-
-              <img className='h-full mx-auto' src={crew[slide].images.png} alt={crew[slide].name} />
-
+              <AnimatePresence exitBeforeEnter>
+                <motion.img key={crew[slide].images.png}
+                            initial="initial"
+                            animate="animate"
+                            exit="exit"
+                            variants={animation}
+                            transition={{duration:0.6}}
+                            className='h-full mx-auto' 
+                            src={crew[slide].images.png} 
+                            alt={crew[slide].name} />
+              </AnimatePresence>
             </div>
           
         </> : 'loading'}
