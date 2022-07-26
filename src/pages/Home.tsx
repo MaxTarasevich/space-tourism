@@ -1,12 +1,23 @@
 import React from 'react'
 import MainButton from '../components/MainButton'
 
+import {motion} from 'framer-motion'
+
 
 const Home = () => {
   return (
  <section className='min-h-screen md:pt-[26%] pt-[30%] md:pb-[70px] pb-12 lg:bg-home-bg-lg md:bg-home-bg-md bg-home-bg-sm bg-no-repeat bg-cover'>
 
-    <div className="wrapper flex lg:justify-between justify-center md:gap-y-36 gap-y-20 lg:gap-x-0 gap-x-[50%] items-end lg:flex-nowrap flex-wrap">
+    <motion.div 
+      animate={{
+        scale:[0,1],
+        opacity:[0,1]
+      }}
+      transition={{
+        duration:1.0,
+      }}
+      className="wrapper flex lg:justify-between justify-center md:gap-y-36 gap-y-20 lg:gap-x-0 gap-x-[50%] items-end lg:flex-nowrap flex-wrap">
+
         <div className="home max-w-[445px]">
           <h2 className='typ-subheading1'>
             SO, YOU WANT TO TRAVEL TO
@@ -20,8 +31,10 @@ const Home = () => {
             experience!
           </p>
         </div>
+
         <MainButton />
-    </div>
+
+    </motion.div>
   
  </section>
   )

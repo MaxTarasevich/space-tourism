@@ -54,6 +54,9 @@ module.exports = {
       'body':'1.5px'
     },
     extend: {
+      animation: {
+        'spin-slow': 'spin 24s linear infinite',
+      },
       backgroundImage: {
       'home-bg-lg': "url('../public/assets/home/background-home-desktop.jpg')",
       'home-bg-md': "url('../public/assets/home/background-home-tablet.jpg')",

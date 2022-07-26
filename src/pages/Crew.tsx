@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react'
 import TitlePage from '../components/TitlePage'
 
@@ -29,7 +30,16 @@ useEffect(() => {
 
   return (
   <section className='min-h-screen md:pt-[15%] pt-[23%] lg:bg-crew-bg-lg md:bg-crew-bg-md bg-crew-bg-sm bg-no-repeat bg-cover'>
-      <div className="wrapper">
+
+      <motion.div 
+         animate={{
+          scale:[0,1],
+          opacity:[0,1]
+        }}
+        transition={{
+          duration:1.0,
+        }}
+        className="wrapper">
 
         <TitlePage page={'02'} text={'Meet your crew'} />
 
@@ -50,7 +60,7 @@ useEffect(() => {
                 {crew[slide].bio}
               </p>
 
-              <div className="crew-navigation lg:absolute bottom-4 md:mt-10 md:mb-0 mb-8 flex  lg:justify-start justify-center gap-x-6 md:order-1 -order-10">
+              <div className="crew-navigation lg:absolute bottom-16 md:mt-10 md:mb-0 mb-8 flex  lg:justify-start justify-center gap-x-6 md:order-1 -order-10">
 
                {crew.map((el,index)=>(
                 <div key={index} 
@@ -79,7 +89,8 @@ useEffect(() => {
           
 
         </div>
-      </div>  
+      </motion.div>  
+      
   </section>
   )
 }

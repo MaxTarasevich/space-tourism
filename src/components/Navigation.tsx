@@ -26,7 +26,7 @@ const [burger,setBurger]= useState<boolean>(false)
                                 <li key={i}>
                                     <NavLink to={`/${i}`} 
                                             className='inline-block md:py-9 py-3 md:w-fit w-full list-border animate-hover'
-                                            onClick={()=>setBurger(!burger)}
+                                            onClick={()=>burger ? setBurger(!burger):''}
                                     >
                                         <span className='font-bold mr-3 lg:inline-block md:hidden'>
                                             0{index}
