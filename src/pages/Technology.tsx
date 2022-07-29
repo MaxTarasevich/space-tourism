@@ -53,7 +53,7 @@ useEffect(() => {
               {tech.map((el, index)=>(
                  <button key={index}
                  className={`technology-btn typ-heading4 text-center xl:px-9 md:px-6 px-4 aspect-square rounded-full bg-transparen border border-white-100
-                             hover:bg-white-100 hover:text-dark animate-hover 
+                             hover:bg-grey-65 hover:text-dark animate-hover 
                              ${index===slide ? 'bg-white-100 text-dark' : ''}`}
                   onClick={()=>setSlide(index)}>
                    {index+1}

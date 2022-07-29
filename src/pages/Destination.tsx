@@ -22,6 +22,8 @@ const [destination, setDestination] = useState<DestinationData[]>([])
 
 const [slide, setSlide] = useState<number>(0)
 
+const [timeOut,setTimeOut] = useState<boolean>(true)
+
 useEffect(() => {
    setDestination(data.destinations)
   
@@ -67,7 +69,16 @@ useEffect(() => {
                       <li key={`${el.name}${index}`} 
                           className={`pb-3 tab-border animate-hover cursor-pointer text-purple 
                                       ${index===slide ? 'active' : ''}`}
-                          onClick={()=>setSlide(index)}
+                          onClick={()=>{
+                            if(timeOut){
+                              setSlide(index)
+                              setTimeOut(false)
+                              setTimeout(()=>{
+                                setTimeOut(true)
+                              },2000)
+                            }
+                            
+                          }}
                       >
                         {el.name}
                       </li>
