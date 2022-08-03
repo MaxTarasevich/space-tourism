@@ -29,7 +29,7 @@ useEffect(() => {
 
 
   return (
-  <section className='min-h-screen md:pt-[15%] pt-[23%] lg:bg-crew-bg-lg md:bg-crew-bg-md bg-crew-bg-sm bg-no-repeat bg-cover'>
+  <section className='min-h-screen lg:pb-6 md:pt-[15%] pt-[23%] lg:bg-crew-bg-lg md:bg-crew-bg-md bg-crew-bg-sm bg-no-repeat bg-cover'>
 
       <motion.div 
          animate={{
@@ -46,7 +46,7 @@ useEffect(() => {
         <div className='crew flex lg:justify-between justify-center items-stretch gap-14 lg:flex-nowrap flex-wrap mt-16'>
         {crew[0] ? 
         <>
-        <div className="crew-content max-w-[488px] md:order-1 order-2 flex flex-col">
+        <div className="crew-content max-w-[488px] md:order-1 order-2 flex flex-col relative">
         <AnimatePresence exitBeforeEnter>
           <motion.div key={crew[slide].name}
                       initial="initialText"
@@ -70,7 +70,7 @@ useEffect(() => {
           </motion.div>
         </AnimatePresence>
         
-              <div className="crew-navigation lg:absolute bottom-16 md:mt-10 md:mb-0 mb-8 flex  lg:justify-start justify-center gap-x-6 md:order-1 -order-10">
+              <div className="crew-navigation lg:absolute lg:pb-10 -bottom-6 md:mt-10 md:mb-0 mb-8 flex  lg:justify-start justify-center gap-x-6 md:order-1 -order-10">
          
                {crew.map((el,index)=>(
                 <div key={index} 
