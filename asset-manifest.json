@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/space-tourism/static/css/main.61c7e150.css",
-    "main.js": "/space-tourism/static/js/main.0a383ca3.js",
+    "main.js": "/space-tourism/static/js/main.bcf0cebf.js",
     "static/media/background-home-desktop.jpg": "/space-tourism/static/media/background-home-desktop.cdf3864ecbfdf20e8c3b.jpg",
     "static/media/background-destination-desktop.jpg": "/space-tourism/static/media/background-destination-desktop.468b922c69bf5499b4bc.jpg",
     "static/media/Barlow-Regular.woff": "/space-tourism/static/media/Barlow-Regular.b01be197bee9b9a37cae.woff",
@@ -20,10 +20,10 @@
     "static/media/background-destination-mobile.jpg": "/space-tourism/static/media/background-destination-mobile.e0131e27e751ead1a922.jpg",
     "index.html": "/space-tourism/index.html",
     "main.61c7e150.css.map": "/space-tourism/static/css/main.61c7e150.css.map",
-    "main.0a383ca3.js.map": "/space-tourism/static/js/main.0a383ca3.js.map"
+    "main.bcf0cebf.js.map": "/space-tourism/static/js/main.bcf0cebf.js.map"
   },
   "entrypoints": [
     "static/css/main.61c7e150.css",
-    "static/js/main.0a383ca3.js"
+    "static/js/main.bcf0cebf.js"
   ]
 }
