@@ -6,7 +6,7 @@ import {motion} from 'framer-motion'
 
 const Home = () => {
   return (
- <section className='min-h-screen md:pt-[26%] pt-[30%] md:pb-[70px] pb-12 lg:bg-home-bg-lg md:bg-home-bg-md bg-home-bg-sm bg-no-repeat bg-cover'>
+ <section className='min-h-screen xl:pt-[23%] md:pt-[26%] pt-[30%] md:pb-[70px] pb-12 lg:bg-home-bg-lg md:bg-home-bg-md bg-home-bg-sm bg-no-repeat bg-cover'>
 
     <motion.div 
       animate={{
