@@ -50,7 +50,7 @@ useEffect(() => {
             
               <div className="destination-img lg:w-[50%] sm:w-[300px] sm:min-h-[300px] w-[200px] min-h-[200px] relative">
                 <AnimatePresence>
-                  <motion.img key={destination[slide].images.png} 
+                  <motion.img key={`${process.env.PUBLIC_URL}${destination[slide].images.png}`} 
                               initial={{ x: '100%', opacity: 0, scale:0.2, }} 
                               animate={{ x:'0%', opacity: 1, scale:1, }} 
                               exit={{ x: '-100%', opacity: 0, scale:0.2 }} 
