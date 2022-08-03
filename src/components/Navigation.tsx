@@ -24,7 +24,7 @@ const [burger,setBurger]= useState<boolean>(false)
 
                             {Nav.map((i,index)=>(
                                 <li key={i}>
-                                    <NavLink to={`/${i}`} 
+                                    <NavLink to={`/space-tourism/${i}`} 
                                             className='inline-block md:py-9 py-3 md:w-fit w-full list-border animate-hover'
                                             onClick={()=>burger ? setBurger(!burger):''}
                                     >

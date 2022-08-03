@@ -92,7 +92,7 @@ useEffect(() => {
             <div className="crew-image md:h-[532px] h-[230px] lg:-mb-10 md:w-fit 
                             w-full md:order-2 order-1 md:border-b-transparent border-b border-line-grey">
               <AnimatePresence exitBeforeEnter>
-                <motion.img key={`{${process.env.PUBLIC_URL}${crew[slide].images.png}`}
+                <motion.img key={crew[slide].images.png}
                             initial="initial"
                             animate="animate"
                             exit="exit"

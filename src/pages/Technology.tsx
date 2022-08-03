@@ -96,10 +96,10 @@ useEffect(() => {
                           transition={{duration:0.6}}
                           className="technology-image 2xl:w-[50%] lg:h-[527px] md:h-[310px] h-[170px] lg:order-1 -order-1 lg:mb-0 md:mb-16 mb-9">
 
-              <source media="(min-width: 1024px)" srcSet={`${process.env.PUBLIC_URL}${tech[slide].images.portrait}`} />
+              <source media="(min-width: 1024px)" srcSet={tech[slide].images.portrait} />
             
               <img  className='h-full object-cover object-center lg:w-full w-screen' 
-                    src={`${process.env.PUBLIC_URL}${tech[slide].images.landscape}`} 
+                    src={tech[slide].images.landscape} 
                     alt={tech[slide].name} />
             
           </motion.picture>
