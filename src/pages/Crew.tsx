@@ -29,7 +29,7 @@ useEffect(() => {
 
 
   return (
-  <section className='min-h-screen lg:pb-10 md:pt-[15%] pt-[23%] lg:bg-crew-bg-lg md:bg-crew-bg-md bg-crew-bg-sm bg-no-repeat bg-cover'>
+  <section className='min-h-screen pb-10 md:pt-[15%] pt-[23%] lg:bg-crew-bg-lg md:bg-crew-bg-md bg-crew-bg-sm bg-no-repeat bg-cover'>
 
       <motion.div 
          animate={{

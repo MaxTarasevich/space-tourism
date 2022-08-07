@@ -31,6 +31,10 @@
     font-style: normal;
     font-display: swap;
 }
+
+
+
+
 body{
     @apply text-white-100 font-Bellefair;
 }
@@ -72,27 +76,27 @@ body{
     }
 
     .typ-heading1{
-        @apply lg:text-left text-center md:text-head1 text-[80px] uppercase;
+        @apply lg:text-left text-center md:text-head1 text-[80px] uppercase text-white-100;
     }
 
     .typ-heading2{
-        @apply lg:text-head2 lg:text-left text-center md:text-[80px] text-[56px] uppercase;
+        @apply lg:text-head2 lg:text-left text-center md:text-[80px] text-[56px] uppercase text-white-100;
     }
 
     .typ-heading3{
-        @apply lg:text-head3 md:text-[40px] text-[24px] uppercase lg:text-left text-center;
+        @apply lg:text-head3 md:text-[40px] text-[24px] uppercase lg:text-left text-center text-white-100;
     }
 
     .typ-heading4{
-        @apply lg:text-head4 md:text-[24px] text-[16px] uppercase lg:text-left text-center;
+        @apply lg:text-head4 md:text-[24px] text-[16px] uppercase lg:text-left text-center text-white-100;
     }
 
     .typ-heading5{
-        @apply font-BarlowCond lg:text-head5 md:text-[20px] text-[16px] font-normal uppercase;
+        @apply font-BarlowCond lg:text-head5 md:text-[20px] text-[16px] font-normal uppercase text-white-100;
     }
 
     .typ-subheading1{
-        @apply lg:text-subhead1 lg:text-left md:text-[20px] text-center uppercase;
+        @apply lg:text-subhead1 lg:text-left md:text-[20px] text-center uppercase text-white-100;
     }
 
     .typ-subheading2{
@@ -100,7 +104,7 @@ body{
     }
 
     .typ-body{
-        @apply font-Barlow lg:text-body lg:text-left text-[16px] text-center ;
+        @apply font-Barlow lg:text-body lg:text-left text-[16px] text-center text-white-100;
     }
 
 
