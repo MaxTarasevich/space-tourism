@@ -8,6 +8,7 @@ import Navigation from './components/Navigation';
 import Crew  from './pages/Crew';
 import Destination from './pages/Destination';
 import Home  from './pages/Home';
+import PageNotFound from './pages/PageNotFound';
 import Technology from './pages/Technology';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Route path="/space-tourism/Crew" element={<Crew />} />
       <Route path="/space-tourism/Destination" element={<Destination />} />
       <Route path="/space-tourism/Technology" element={<Technology />} />
+      <Route path="/space-tourism/*" element={<PageNotFound/>} />
       
     </Routes>
     </>
