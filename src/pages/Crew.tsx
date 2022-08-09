@@ -90,7 +90,14 @@ useEffect(() => {
         </div>
 
             <div className="crew-image md:h-[532px] h-[230px] lg:-mb-10 md:w-fit 
-                            w-full md:order-2 order-1 md:border-b-transparent border-b border-line-grey">
+                            w-full md:order-2 order-1 md:border-b-transparent border-b border-line-grey cursor-pointer"
+                           onClick={()=>{
+                            if(slide >= crew.length-1){
+                              setSlide(0)
+                            }else{
+                              setSlide(slide+1)
+                            }
+                           }}>
               <AnimatePresence exitBeforeEnter>
                 <motion.img key={crew[slide].images.png}
                             initial="initial"
